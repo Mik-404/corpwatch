@@ -1,0 +1,2369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bluelight"
+    tools:context=".GetInfo">
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dotted_line"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/form_back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddReq">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/generalField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/prName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Наименование проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/editPrName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Название"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/proPurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Цель проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/editproPurpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Цель"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/generalStages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="1. Основные этапы реализации проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/generalStagesContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Наименование мероприятия"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/examGeneralStagesNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Название"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Дата"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/examGeneralStagesDateInputHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/examGeneralStagesDateInputHolderRel1"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/examGeneralStagesDateInputF"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text"
+                                android:ems="10"
+                                android:fontFamily="monospace"
+                                android:hint="Начало"
+                                android:inputType="text"
+                                android:padding="6dp"
+                                android:tag="data"
+                                android:textSize="12sp" />
+
+                            <ImageButton
+                                android:id="@+id/examGeneralStagesDateInputFButton"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dip"
+                                android:background="@drawable/calendar"
+                                android:onClick="ShowDatePicker"
+                                android:tag="1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/examGeneralStagesDateInputHolderRel2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/examGeneralStagesDateInputT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text"
+                                android:ems="10"
+                                android:fontFamily="monospace"
+                                android:hint="Окончание"
+                                android:inputType="text"
+                                android:padding="6dp"
+                                android:tag="data"
+                                android:textSize="12sp" />
+
+                            <ImageButton
+                                android:id="@+id/examGeneralStagesDateInputTButton"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dip"
+                                android:background="@drawable/calendar"
+                                android:onClick="ShowDatePicker"
+                                android:tag="2" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Результат от реализации мероприятия"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/examGeneralStagesResultInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Результат"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add1"
+                        android:background="@drawable/minus"
+                        android:onClick="FirstSectionRemove"
+
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/add1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="FirstSectionAdd"
+
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projCosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="2. Структура затрат проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projCostsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projCostsName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Статья затрат проекта"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projCostsNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Затраты"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projCostsByQuarter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Фактические затраты по проекту, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projCostsByQuarterInputHolder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput1"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projCostsByQuarterInputHolder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput4"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add2"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove"
+                        android:scaleType="fitXY"
+
+                        android:tag="2" />
+
+                    <ImageButton
+                        android:id="@+id/add2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd"
+                        android:scaleType="fitXY"
+
+                        android:tag="2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projFinancingSources"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="3. Источники финансирования проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projFinancingSourcesContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projFinancingSourcesName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Источник финансирования"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projFinancingSourcesNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Источник"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projFinancingSourcesByQuarter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Фактически вложено средств в проект, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projFinancingSourcesByQuarterInputHolder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput1"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projFinancingSourcesByQuarterInputHolder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput4"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add3"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove"
+                        android:scaleType="fitXY"
+
+                        android:tag="3" />
+
+                    <ImageButton
+                        android:id="@+id/add3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd"
+                        android:scaleType="fitXY"
+
+                        android:tag="3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projParams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="4. Основные параметры проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projParamsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projParamsProductsTypes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Виды продукции"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projParamsProductsTypesInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Продукт"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projParamsProfit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Выручка, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput1"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput4"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add4"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove"
+                        android:scaleType="fitXY"
+
+                        android:tag="4" />
+
+                    <ImageButton
+                        android:id="@+id/add4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd"
+                        android:scaleType="fitXY"
+
+                        android:tag="4" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/projParamsContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projParamsProductsTypes2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Виды продукции"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projParamsProductsTypesInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Продукт"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projParamsProfit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Объем реализации продукции, натуральные единицы "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput5"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput6"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput7"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput8"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add5"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove"
+                        android:scaleType="fitXY"
+                        android:tag="5" />
+
+                    <ImageButton
+                        android:id="@+id/add5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd"
+                        android:scaleType="fitXY"
+                        android:tag="5" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="5. Прочая информация о проекте"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/projInfoWorkersCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Численность работников  на отчетную дату, чел."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoWorkersCountInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoTaxesPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Сумма  уплаченных налогов, сборов, страховых взносов (без НДС), руб."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoTaxesPaidInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Сумма"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoProd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Номенклатура производимой продукции (кол-во работ, услуг), ед."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoProdInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoGeo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="География поставок (кол-во субъектов РФ в которые осуществляются поставки товаров, работ, услуг), ед."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoGeoInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoChanges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Внесение изменений  в учредительные документы ( изменение состава собственников,  руководства, кодов ОКВЭД и др.)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoChangesInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Инфо"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoClaims"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Наличие судебных исков (проект-ответчик)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoClaimsInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Инфо"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_log"
+                    android:fontFamily="monospace"
+                    android:onClick="SendInfo"
+                    android:text="Отправить"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/form2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/form_back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddTest">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/generalField2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/prName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Наименование проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/editPrName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Название"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/proPurpose2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Цель проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/editproPurpose2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Цель"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/generalStages2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="1. Основные этапы реализации проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/generalStagesContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Наименование мероприятия"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/examGeneralStagesNameInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Название"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Дата"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/examGeneralStagesDateInputHolder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/examGeneralStagesDateInputHolderRel12"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/examGeneralStagesDateInputF2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text"
+                                android:ems="10"
+                                android:fontFamily="monospace"
+                                android:hint="Начало"
+                                android:inputType="text"
+                                android:padding="6dp"
+                                android:tag="data"
+                                android:textSize="12sp" />
+
+                            <ImageButton
+                                android:id="@+id/examGeneralStagesDateInputFButton2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dip"
+                                android:background="@drawable/calendar"
+                                android:onClick="ShowDatePicker"
+                                android:tag="1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/examGeneralStagesDateInputHolderRel22"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/examGeneralStagesDateInputT2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text"
+                                android:ems="10"
+                                android:fontFamily="monospace"
+                                android:hint="Окончание"
+                                android:inputType="text"
+                                android:padding="6dp"
+                                android:tag="data"
+                                android:textSize="12sp" />
+
+                            <ImageButton
+                                android:id="@+id/examGeneralStagesDateInputTButton2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dip"
+                                android:background="@drawable/calendar"
+                                android:onClick="ShowDatePicker"
+                                android:tag="2" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/examGeneralStagesResult2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Результат от реализации мероприятия"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/examGeneralStagesResultInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Результат"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove12"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add12"
+                        android:background="@drawable/minus"
+                        android:onClick="FirstSectionRemove2"
+
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/add12"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="FirstSectionAdd2"
+
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projCosts2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="2. Структура затрат проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projCostsContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projCostsName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Статья затрат проекта"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projCostsNameInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Затраты"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projCostsByQuarter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Фактические затраты по проекту, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projCostsByQuarterInputHolder12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput12"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput22"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projCostsByQuarterInputHolder22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput32"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projCostsByQuarterInput42"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove22"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add22"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove2"
+                        android:scaleType="fitXY"
+
+                        android:tag="2" />
+
+                    <ImageButton
+                        android:id="@+id/add22"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd2"
+                        android:scaleType="fitXY"
+
+                        android:tag="2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projFinancingSources2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="3. Источники финансирования проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projFinancingSourcesContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projFinancingSourcesName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Источник финансирования"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projFinancingSourcesNameInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Источник"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projFinancingSourcesByQuarter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Фактически вложено средств в проект, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projFinancingSourcesByQuarterInputHolder12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput12"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput22"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projFinancingSourcesByQuarterInputHolder22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput32"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projFinancingSourcesByQuarterInput42"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove32"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add32"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove2"
+                        android:scaleType="fitXY"
+
+                        android:tag="3" />
+
+                    <ImageButton
+                        android:id="@+id/add32"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd2"
+                        android:scaleType="fitXY"
+
+                        android:tag="3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projParams2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="4. Основные параметры проекта"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/projParamsContent22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projParamsProductsTypes22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Виды продукции"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projParamsProductsTypesInput22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Продукт"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projParamsProfit22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Выручка, руб."
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput12"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput22"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput32"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput42"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove42"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add42"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove2"
+                        android:scaleType="fitXY"
+
+                        android:tag="4" />
+
+                    <ImageButton
+                        android:id="@+id/add42"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd2"
+                        android:scaleType="fitXY"
+
+                        android:tag="4" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/projParamsContent222"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/projParamsProductsTypes222"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Виды продукции"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/projParamsProductsTypesInput222"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="monospace"
+                        android:hint="Продукт"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/projParamsProfit222"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Объем реализации продукции, натуральные единицы "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput52"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="1-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput62"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="2-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projParamsProfitInputHolder42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput72"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="3-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/projParamsProfitInput82"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text"
+                            android:ems="10"
+                            android:fontFamily="monospace"
+                            android:hint="4-й квартал"
+                            android:inputType="numberDecimal"
+                            android:padding="6dp"
+                            android:tag="data"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check52"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:id="@+id/remove52"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/add52"
+                        android:background="@drawable/minus"
+                        android:onClick="OtherSectionsRemove2"
+                        android:scaleType="fitXY"
+                        android:tag="5" />
+
+                    <ImageButton
+                        android:id="@+id/add52"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/plus"
+                        android:onClick="OtherSectionsAdd2"
+                        android:scaleType="fitXY"
+                        android:tag="5" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/projInfo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="5. Прочая информация о проекте"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/projInfoWorkersCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Численность работников  на отчетную дату, чел."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoWorkersCountInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoTaxesPaid2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Сумма  уплаченных налогов, сборов, страховых взносов (без НДС), руб."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoTaxesPaidInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Сумма"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoProd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Номенклатура производимой продукции (кол-во работ, услуг), ед."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoProdInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoGeo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="География поставок (кол-во субъектов РФ в которые осуществляются поставки товаров, работ, услуг), ед."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoGeoInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Количество"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoChanges2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Внесение изменений  в учредительные документы ( изменение состава собственников,  руководства, кодов ОКВЭД и др.)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoChangesInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Инфо"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/projInfoClaims2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Наличие судебных исков (проект-ответчик)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/projInfoClaimsInput2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="monospace"
+                    android:hint="Инфо"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_log"
+                    android:fontFamily="monospace"
+                    android:onClick="SendInfo2"
+                    android:text="Отправить"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/AddReq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/Help1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Help2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/imageButton8"
+                android:onClick="OnClickDownload"
+                android:tag="1"
+                android:text="Скачать образец"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+
+                android:background="#00FFFFFF"
+                android:onClick="OnClickDownload"
+                android:scaleType="fitEnd"
+                android:src="@drawable/download"
+                android:tag="1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Help2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:onClick="OnAddButton"
+                android:tag="1"
+                android:text="Прикрепить файл"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/textView2"
+                android:background="#00FFFFFF"
+                android:onClick="OnAddButton"
+                android:scaleType="fitEnd"
+                android:src="@drawable/real_skrpc"
+                android:tag="1"
+                tools:src="@drawable/real_skrpc" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_log"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:onClick="OnClickButton1"
+                android:padding="8dp"
+                android:tag="1"
+                android:text="Отправить анкету"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AddTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/Help3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Help4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/imageButton9"
+                android:onClick="OnClickDownload"
+                android:tag="1"
+                android:text="Скачать образец"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+
+                android:background="#00FFFFFF"
+                android:onClick="OnClickDownload"
+                android:scaleType="fitEnd"
+                android:src="@drawable/download"
+                android:tag="1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Help4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:onClick="OnAddButton"
+                android:tag="2"
+                android:text="Прикрепить файл"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/textView3"
+                android:background="#00FFFFFF"
+                android:onClick="OnAddButton"
+                android:scaleType="fitEnd"
+                android:src="@drawable/real_skrpc"
+                android:tag="2"
+                tools:src="@drawable/real_skrpc" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_log"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:onClick="OnClickButton1"
+                android:padding="8dp"
+                android:tag="2"
+                android:text="Отправить отчёт"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:onClick="FinisThis"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/back_arrow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
